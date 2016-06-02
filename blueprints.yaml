@@ -6,6 +6,10 @@ author:
   name: Hung Tran
   email: hungtran@peaceofmindwebsite.com
   url: http://www.peaceofmindwebsite.com
+homepage: https://github.com/tranduyhung/grav-theme-big-picture
+demo: http://www.peaceofmindwebsite.com/skeletons/bigpicture
+keywords: big, picture, theme, modern, fast, responsive, html5, css3, one, single, page
+bugs: https://github.com/tranduyhung/grav-theme-big-picture/issues
 license: MIT
 
 form:
