@@ -1,0 +1,52 @@
+{% if form.message %}<div class="alert">{{ form.message }}</div>{% endif %}
+{% set multipart = '' %}
+{% set method = form.method|upper|default('POST') %}
+
+{% for field in form.fields %}
+    {% if (method == 'POST' and field.type == 'file') %}
+        {% set multipart = ' enctype="multipart/form-data"' %}
+    {% endif %}
+{% endfor %}
+
+    <form name="{{ form.name }}"
+          action="{{ form.action ? base_url ~ form.action : page.url }}"
+          method="{{ method }}"{{ multipart }}>
+
+        {% for field in form.fields %}
+            {% set value = form.value(field.name) %}
+                {% if field.name == 'name' %}
+                <div class="row uniform 50%">
+                    <div class="6u 12u$(xsmall)">
+                {% elseif field.name == 'email' %}
+                <div class="6u$ 12u$(xsmall)">
+                {% else %}
+                <div class="row uniform 50%">
+                    <div class="12u$">
+                {% endif %}
+                    {% include "forms/fields/#{field.type}/#{field.type}.html.twig" %}
+
+                {% if field.name == 'name' %}
+                    </div>
+                {% else %}
+                    </div>
+                </div>
+                {% endif %}
+        {% endfor %}
+
+                <div class="row uniform 50%">
+                    <div class="12u$">
+                        <ul class="actions">
+                        {% for button in form.buttons %}
+                            {% set type = button.type|default('submit') %}
+                            {% if type == 'submit' %}
+                            <li><input class="{{ button.classes|default('button') }}" type="{{ type }}" value="{{ button.value|t|default('Submit') }}"></li>
+                            {% else %}
+                            <li><button class="{{ button.classes|default('button') }}" type="{{ type }}">{{ button.value|t|default('Submit') }}</button></li>
+                            {% endif %}
+                        {% endfor %}
+                        </ul>
+                </div>
+                </div>
+
+      {{ nonce_field('form', 'form-nonce') }}
+    </form>

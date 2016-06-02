@@ -1,0 +1,6 @@
+{% for field in form.fields %}
+    {% if field.name != 'g-recaptcha-response' %}
+        {% set value = form.value(field.name) %}
+        {{ field.name }}: {{ string((value is iterable ? value|json_encode : value)|e|nl2br)|replace({"\n":' ', "\r":' '}) }}
+    {% endif %}
+{% endfor %}

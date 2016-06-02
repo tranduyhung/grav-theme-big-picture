@@ -1,0 +1,27 @@
+<section id="{{ page.folder|replace({'_': ''}) }}" class="main style3 primary">
+    <div class="content container">
+        <header>
+            <h2>{{ header.heading }}</h2>
+
+            {{ content }}
+        </header>
+
+        {% if header.images|length > 0 %}
+        <div class="container 75% gallery">
+            {% for image in header.images %}
+                {% if loop.index % 2 == 1 %}
+                <div class="row 0% images">
+                {% endif %}
+                    <div class="6u 12u(mobile)">
+                        <a href="{{ page.media[image.full].url }}" class="image fit {% if loop.index % 2 == 1 %}from-left{% else %}from-right{% endif %}">
+                            <img src="{{ page.media[image.thumbnail].url }}" title="{{ image.title|escape }}" />
+                        </a>
+                    </div>
+                {% if loop.index % 2 == 0 or loop.index == header.images|length %}
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</section>

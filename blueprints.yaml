@@ -1,0 +1,37 @@
+name: Big Picture
+description: "Grav Theme based on Big Picture HTML theme of html5up.net."
+version: 1.0.0
+icon: photo
+author:
+  name: Hung Tran
+  email: hungtran@peaceofmindwebsite.com
+  url: http://www.peaceofmindwebsite.com
+license: MIT
+
+form:
+  validation: loose
+  fields:
+    footer_icons:
+        type: list
+        label: Footer's Icons
+        help: Shown on the left side of footer.
+        fields:
+            .icon:
+                type: text
+                label: Font Awesome's Icon
+                placeholder: 'fa-facebook'
+
+            .link:
+                type: text
+                label: Link
+                placeholder: 'https://www.facebook.com/your-page'
+
+    footer_items:
+        type: list
+        label: Footer's Items
+        help: Shown on the right side of footer.
+        fields:
+            .item:
+                type: textarea
+                label: Text or HTML Code
+                placeholder: Text or HTML code

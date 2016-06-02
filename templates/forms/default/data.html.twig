@@ -1,0 +1,7 @@
+{% for field in form.fields %}
+{% block field %}
+    {% if field.name != 'g-recaptcha-response' %}
+    <div>{% block field_label %}<strong>{{ field.label }}</strong>{% endblock %}: {% block field_value %}{{ string(form.value(field.name)|e)|nl2br }}{% endblock %}</div>
+    {% endif %}
+{% endblock %}
+{% endfor %}

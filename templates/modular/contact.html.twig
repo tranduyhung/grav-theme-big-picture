@@ -1,0 +1,12 @@
+<section id="{{ page.folder|replace({'_': ''}) }}" class="main style3 secondary">
+    <div class="content container">
+        <header>
+            <h2>{{ header.heading }}</h2>
+            {{ content }}
+        </header>
+
+        <div class="box container 75%">
+            {% include "forms/form.html.twig" %}
+        </div>
+    </div>
+</section>

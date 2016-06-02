@@ -1,0 +1,21 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    <div id="main" class="wrapper style3">
+        <div class="container">
+            <header class="major">
+                {% if page.header.heading %}
+                <h2>{{ page.header.heading }}</h2>
+                {% endif %}
+                {% if page.header.subheading %}
+                <p>{{ page.header.subheading }}</p>
+                {% endif %}
+            </header>
+
+            <section class="special">
+                {{ content }}
+                {% include "forms/form.html.twig" %}
+            </section>
+        </div>
+    </div>
+{% endblock %}
