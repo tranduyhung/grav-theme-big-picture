@@ -49,6 +49,11 @@ If you have [Admin plugin](https://github.com/getgrav/grav-plugin-admin) install
 
 ![](screenshot_2.jpg)
 
+* To manage the items in footer, you edit the theme's settings. Links with icons are on the left side of footer, on the right side are custom text.
+
+![](screenshot_3.jpg)
+
+
 # Updating
 
 ## Manual Update
