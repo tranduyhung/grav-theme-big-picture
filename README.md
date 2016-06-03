@@ -14,13 +14,21 @@ Big Picture theme is a port of [Big Picture](http://html5up.net/big-picture) by 
 
 # Installation
 
+## GPM Installation (Preferred)
+
+The simplest way to install this theme is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm) through your system's Terminal (also called the command line).  From the root of your Grav install type:
+
+    bin/gpm install big-picture
+
+This will install the Gateway theme into your `/user/themes` directory within Grav. Its files can be found under `/your/site/grav/user/themes/big-picture`.
+
 ## Manual Installation
 
-To install this theme, just download the zip version of this repository and unzip it under `/your/site/grav/user/themes`. Then, rename the folder to `bigpicture`.
+To install this theme, just download the zip version of this repository and unzip it under `/your/site/grav/user/themes`. Then, rename the folder to `big-picture`.
 
 You should now have all the theme files under
 
-    /your/site/grav/user/themes/bigpicture
+    /your/site/grav/user/themes/big-picture
 
 >> NOTE: This theme is a modular component for Grav which requires the [Grav](http://github.com/getgrav/grav), [Error](https://github.com/getgrav/grav-theme-error), [Problems](https://github.com/getgrav/grav-plugin-problems), [Email](https://github.com/getgrav/grav-plugin-email) and [Form](https://github.com/getgrav/grav-plugin-form) plugins.
 
@@ -30,11 +38,11 @@ If you want to set Big Picture as the default theme, you can do so by following 
 
 * Navigate to `/your/site/grav/user/config`.
 * Open the **system.yaml** file.
-* Change the `theme:` setting to `theme: bigpicture`.
+* Change the `theme:` setting to `theme: big-picture`.
 * Save your changes.
 * Clear the Grav cache. The simplest way to do this is by going to the root Grav directory in Terminal and typing `bin/grav clear-cache`.
 
-Once this is done, you should be able to see the new theme on the frontend. Keep in mind any customizations made to the previous theme will not be reflected as all of the theme and templating information is now being pulled from the **bigpicture** folder.
+Once this is done, you should be able to see the new theme on the frontend. Keep in mind any customizations made to the previous theme will not be reflected as all of the theme and templating information is now being pulled from the **big-picture** folder.
 
 # Configuration with Admin plugin
 
@@ -53,16 +61,23 @@ If you have [Admin plugin](https://github.com/getgrav/grav-plugin-admin) install
 
 ![](screenshot_3.jpg)
 
-
 # Updating
+
+## GPM Update (Preferred)
+
+The simplest way to update this theme is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm). You can do this with this by navigating to the root directory of your Grav install using your system's Terminal (also called command line) and typing the following:
+
+    bin/gpm update big-picture
+
+This command will check your Grav install to see if your Gateway theme is due for an update. If a newer release is found, you will be asked whether or not you wish to update. To continue, type `y` and hit enter. The theme will automatically update and clear Grav's cache.
 
 ## Manual Update
 
 Manually updating Big Picture is pretty simple. Here is what you will need to do to get this done:
 
-* Delete the `your/site/user/themes/bigpicture` directory.
+* Delete the `your/site/user/themes/big-picture` directory.
 * Download the new version of the Big Picture theme from this repository.
-* Unzip the zip file in `your/site/user/themes` and rename the resulting folder to `bigpicture`.
+* Unzip the zip file in `your/site/user/themes` and rename the resulting folder to `big-picture`.
 * Clear the Grav cache. The simplest way to do this is by going to the root Grav directory in terminal and typing `bin/grav clear-cache`.
 
 > Note: Any changes you have made to any of the files listed under this directory will also be removed and replaced by the new set. Any files located elsewhere (for example a YAML settings file placed in `user/config/themes`) will remain intact.
