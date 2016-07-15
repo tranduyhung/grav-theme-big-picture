@@ -61,6 +61,25 @@ If you have [Admin plugin](https://github.com/getgrav/grav-plugin-admin) install
 
 ![](screenshot_3.jpg)
 
+# Navigation Buttons
+
+To have navigation button for each section, the folder name of your home page must be "home", in its modular.md file you need to setup the custom ordering of your modular pages. Here is an example:
+
+```
+title: Home
+content:
+    items: '@self.modular'
+    order:
+        by: default
+        dir: asc
+        custom:
+            - _intro
+            - _what-i-do
+            - _who-i-am
+            - _my-work
+            - _contact
+```
+
 # Updating
 
 ## GPM Update (Preferred)

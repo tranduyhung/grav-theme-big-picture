@@ -1,3 +1,9 @@
+# v1.0.2
+## 15/07/2016
+
+1. [](#bugfix)
+    * Removed hardcoded content in default.html.twig
+
 # v1.0.1
 ## 03/06/2016
 
