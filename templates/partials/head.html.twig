@@ -16,9 +16,9 @@
 <link rel="icon" href="{{ url('theme://images/favicon.png', true) }}" />
 
 {% block stylesheets %}
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900' rel='stylesheet' type='text/css'>
-    {% do assets.add('theme://assets/css/font-awesome.min.css', 101) %}
-    {% do assets.add('theme://assets/css/main.css', 101) %}
+    {% do assets.add('//fonts.googleapis.com/css?family=Source+Sans+Pro:300,900') %}
+    {% do assets.add('theme://assets/css/font-awesome.min.css') %}
+    {% do assets.add('theme://assets/css/main.css') %}
 
     {% if browser.getBrowser == 'msie' and browser.getVersion <= 8 %}
         {% do assets.add('theme://assets/css/ie8.css') %}
@@ -27,9 +27,9 @@
     {% if browser.getBrowser == 'msie' and browser.getVersion == 9 %}
         {% do assets.add('theme://assets/css/ie9.css') %}
     {% endif %}
-
-    {{ assets.css() }}
 {% endblock %}
+
+{{ assets.css() }}
 
 {% block javascripts %}
     {% if browser.getBrowser == 'msie' and browser.getVersion <= 8 %}
@@ -49,7 +49,8 @@
     {% do assets.add('theme://assets/js/skel.min.js') %}
     {% do assets.add('theme://assets/js/util.js') %}
     {% do assets.add('theme://assets/js/main.js') %}
-
-    {{ assets.js() }}
 {% endblock %}
+
+{{ assets.js() }}
+
 {% endblock head %}

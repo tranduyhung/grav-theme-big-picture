@@ -1,3 +1,10 @@
+# v1.0.3
+## 15/09/2016
+
+1. [](#bugfix)
+    * Fixed mixed content issue
+    * Fixed contact form for compatibility with new version of Form plugin
+
 # v1.0.2
 ## 15/07/2016
 
