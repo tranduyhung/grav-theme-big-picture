@@ -3,6 +3,7 @@
 
 1. [](#bugfix)
     * Improved link color
+    * Improved JavaScript
 
 # v1.0.3
 ## 15/09/2016
