@@ -110,7 +110,8 @@
 		font-style: italic;
 	}
 
-	a {
+	a,
+	.dark .box a {
 		@include vendor('transition', ('all 0.2s ease-in-out', 'color 0.2s ease-in-out'));
 		color: #98c593;
 	}

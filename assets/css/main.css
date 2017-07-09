@@ -1424,7 +1424,8 @@ strong, b {
 em, i {
   font-style: italic; }
 
-a {
+a,
+.dark .box a {
   -moz-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
