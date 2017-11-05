@@ -1,0 +1,22 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+{% if theme_config.error_background_image|length > 0 %}
+    {% for image in theme_config.error_background_image %}
+        {% if loop.index == 1 %}
+<section class="main style1 dark fullscreen" style="background-image: url('{{ url('theme://assets/css/images/overlay.png', true) }}'), url('{{ url('theme://images/' ~ image.name, true) }}');
+        {% endif %}
+    {% endfor %}
+">
+{% else %}
+<section class="main style3 primary fullscreen">
+{% endif %}
+    <div class="content container 75%">
+        <header>
+            <h2>{{ 'ERROR'|t }} {{ page.header.http_response_code }}</h2>
+        </header>
+
+        {{ content }}
+    </div>
+</section>
+{% endblock %}

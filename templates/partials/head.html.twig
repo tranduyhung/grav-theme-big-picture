@@ -13,7 +13,14 @@
 <meta name="robots" content="{{ header.robots }}">
 {% endif %}
 
-<link rel="icon" href="{{ url('theme://images/favicon.png', true) }}" />
+{% set favicon = 'favicon.png' %}
+{% if theme_config.favicon|length > 0 %}
+    {% for icon in theme_config.favicon %}
+        {% set favicon = icon.name %}
+    {% endfor %}
+{% endif %}
+
+<link rel="icon" href="{{ url('theme://images/' ~ favicon, true) }}" />
 
 {% block stylesheets %}
     <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,900' rel='stylesheet' type='text/css'>
