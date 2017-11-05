@@ -15,6 +15,7 @@ form:
             header.images:
               name: images
               type: list
+              style: vertical
               label: Images
               fields:
                 .title:
@@ -26,6 +27,11 @@ form:
                   label: Full Image
                   help: Full image's filename.
                 .thumbnail:
-                  type: text
+                  type: filepicker
+                  folder: '@self'
+                  preview_images: true
+                  accept:
+                    - .png
+                    - .jpg
                   label: Thumbnail
                   help: Thumbnail's filename.

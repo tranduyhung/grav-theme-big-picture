@@ -17,7 +17,12 @@ form:
               label: Heading
               help: Section's heading.
             header.background_image:
-              type: text
+              type: filepicker
+              folder: '@self'
+              preview_images: true
+              accept:
+                - .png
+                - .jpg
               label: Background Image
               help: Image filename that exists in the page folder.
               placeholder: For example: myimage.jpg
