@@ -12,6 +12,26 @@ form:
           type: tab
           title: Images
           fields:
+            header.thumbnail_max_width:
+              type: text
+              size: x-small
+              label: Thumbnail's Max Width
+              help: Min value 360, max value 1000.
+              default: 540
+              validate:
+                type: int
+                min: 360
+                max: 1000
+            header.thumbnail_max_height:
+              type: text
+              size: x-small
+              label: Thumbnail's Max Height
+              help: Min value 360, max value 1000.
+              default: 540
+              validate:
+                type: int
+                min: 360
+                max: 1000
             header.images:
               name: images
               type: list
@@ -23,15 +43,11 @@ form:
                   label: Title
                   help: Image's title.
                 .full:
-                  type: text
-                  label: Full Image
-                  help: Full image's filename.
-                .thumbnail:
                   type: filepicker
                   folder: '@self'
                   preview_images: true
                   accept:
                     - .png
                     - .jpg
-                  label: Thumbnail
-                  help: Thumbnail's filename.
+                  label: Full Image
+                  help: Full image's filename.

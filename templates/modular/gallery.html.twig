@@ -1,3 +1,13 @@
+{% set thumbWidth = page.header.thumbnail_max_width %}
+{% set thumbHeight = page.header.thumbnail_max_height %}
+
+{% if thumbWidth <= 0 %}
+    {% set thumbWidth = 540 %}
+{% endif %}
+
+{% if thumbHeight <= 0 %}
+    {% set thumbHeight = 540 %}
+{% endif %}
 <section id="{{ page.folder|replace({'_': ''}) }}" class="main style3 primary">
     <div class="content container">
         <header>
@@ -14,7 +24,7 @@
                 {% endif %}
                     <div class="6u 12u(mobile)">
                         <a href="{{ page.media[image.full].url }}" class="image fit {% if loop.index % 2 == 1 %}from-left{% else %}from-right{% endif %}">
-                            <img src="{{ page.media[image.thumbnail].url }}" title="{{ image.title|escape }}" />
+                            <img src="{{ page.media[image.full].cropResize(thumbWidth, thumbHeight).url }}" title="{{ image.title|escape }}" />
                         </a>
                     </div>
                 {% if loop.index % 2 == 0 or loop.index == header.images|length %}
