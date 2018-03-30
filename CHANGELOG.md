@@ -1,3 +1,12 @@
+# v1.4.0
+## 30/03/2018
+
+1. [](#improved)
+    * Added language file
+    * Added ability to show home menu item in non-modular page (thanks to @trangthaonguyen)
+2. [](#bugfix)
+    * Fixed small issue in form's HTML (thanks to @der-trainer)
+
 # v1.3.0
 ## 09/11/2017
 
