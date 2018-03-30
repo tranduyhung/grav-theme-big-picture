@@ -2,8 +2,8 @@
     <h1 id="logo"><a href="{{ base_url == '' ? '/' : base_url }}">{{ site.title }}</a></h1>
     <nav id="nav">
         <ul>
-            {% if page.template() != 'modular' %}
-              <li><a href="{{ base_url == '' ? '/' : base_url }}">{{ page.menu }}</a></li>
+            {% if page.template() != 'modular' and page.header.home_menu_item is not empty %}
+              <li><a href="{{ base_url == '' ? '/' : base_url }}">{{ page.header.home_menu_item }}</a></li>
             {% endif %}
             {% for module in page.collection() %}
             <li><a href="#{{ module.folder|replace({'_': ''}) }}">{{ module.menu }}</a></li>

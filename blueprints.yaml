@@ -1,13 +1,13 @@
 name: Big Picture
 description: "Grav Theme based on Big Picture HTML theme of html5up.net."
-version: 1.3.0
+version: 1.4.0
 icon: photo
 author:
   name: Hung Tran
-  email: hungtran@peaceofmindwebsite.com
-  url: http://www.peaceofmindwebsite.com
+  email: flatfiledeveloper@gmail.com
+  url: https://flatfiledeveloper.com
 homepage: https://github.com/tranduyhung/grav-theme-big-picture
-demo: http://www.peaceofmindwebsite.com/skeletons/bigpicture
+demo: https://grav-theme-big-picture.flatfiledeveloper.com
 keywords: big, picture, theme, modern, fast, responsive, html5, css3, one, single, page
 bugs: https://github.com/tranduyhung/grav-theme-big-picture/issues
 license: MIT
@@ -16,40 +16,41 @@ form:
   validation: loose
   fields:
     favicon:
-        type: file
-        label: favicon
-        destination: 'user/themes/big-picture/images'
-        multiple: false
-        accept:
-            - image/*
+      type: file
+      label: THEME_BIG_PICTURE.FAVICON
+      destination: 'user/themes/big-picture/images'
+      multiple: false
+      accept:
+        - image/*
     error_background_image:
-        type: file
-        label: Background Image for Error Page
-        destination: 'user/themes/big-picture/images'
-        multiple: false
-        accept:
-            - image/*
+      type: file
+      label: THEME_BIG_PICTURE.ERROR_BACKGROUND_IMAGE
+      destination: 'user/themes/big-picture/images'
+      multiple: false
+      accept:
+        - image/*
     footer_icons:
-        type: list
-        label: Footer's Icons
-        help: Shown on the left side of footer.
-        fields:
-            .icon:
-                type: text
-                label: Font Awesome's Icon
-                placeholder: 'fa-facebook'
+      type: list
+      label: THEME_BIG_PICTURE.FOOTER_ICONS
+      help: THEME_BIG_PICTURE.FOOTER_ICONS_HELP
+      fields:
+        .icon:
+          type: text
+          label: THEME_BIG_PICTURE.FOOTER_ICONS_ICON
+          placeholder: 'fa-facebook'
 
-            .link:
-                type: text
-                label: Link
-                placeholder: 'https://www.facebook.com/your-page'
+        .link:
+          type: text
+          label: THEME_BIG_PICTURE.FOOTER_ICONS_LINK
+          placeholder: THEME_BIG_PICTURE.FOOTER_ICONS_LINK_HELP
 
     footer_items:
-        type: list
-        label: Footer's Items
-        help: Shown on the right side of footer.
-        fields:
-            .item:
-                type: textarea
-                label: Text or HTML Code
-                placeholder: Text or HTML code
+      type: list
+      label: THEME_BIG_PICTURE.FOOTER_ITEMS
+      help: THEME_BIG_PICTURE.FOOTER_ITEMS_HELP
+      fields:
+        .item:
+          type: textarea
+          label: THEME_BIG_PICTURE.FOOTER_ITEMS_ITEM
+          help: THEME_BIG_PICTURE.FOOTER_ITEMS_ITEM_HELP
+          placeholder: THEME_BIG_PICTURE.FOOTER_ITEMS_ITEM_HELP

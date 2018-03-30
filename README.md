@@ -4,7 +4,11 @@
 
 Big Picture theme is a port of [Big Picture](http://html5up.net/big-picture) by [HTML5 UP](http://html5up.net/).
 
-# Features
+## Demo
+
+You can find a demo of the theme at [grav-theme-big-picture.flatfiledeveloper.com](https://grav-theme-big-picture.flatfiledeveloper.com).
+
+## Features
 
 * One page with contact form
 * Fully responsive
@@ -12,9 +16,9 @@ Big Picture theme is a port of [Big Picture](http://html5up.net/big-picture) by 
 * Font Awesome ready
 * Released under [Creative Commons Attribution 3.0 License](http://html5up.net/license)
 
-# Installation
+## Installation
 
-## GPM Installation (Preferred)
+### GPM Installation (Preferred)
 
 The simplest way to install this theme is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm) through your system's Terminal (also called the command line).  From the root of your Grav install type:
 
@@ -22,7 +26,7 @@ The simplest way to install this theme is via the [Grav Package Manager (GPM)](h
 
 This will install the Gateway theme into your `/user/themes` directory within Grav. Its files can be found under `/your/site/grav/user/themes/big-picture`.
 
-## Manual Installation
+### Manual Installation
 
 To install this theme, just download the zip version of this repository and unzip it under `/your/site/grav/user/themes`. Then, rename the folder to `big-picture`.
 
@@ -32,7 +36,7 @@ You should now have all the theme files under
 
 >> NOTE: This theme is a modular component for Grav which requires the [Grav](http://github.com/getgrav/grav), [Error](https://github.com/getgrav/grav-theme-error), [Problems](https://github.com/getgrav/grav-plugin-problems), [Email](https://github.com/getgrav/grav-plugin-email) and [Form](https://github.com/getgrav/grav-plugin-form) plugins.
 
-# Setup
+## Setup
 
 If you want to set Big Picture as the default theme, you can do so by following these steps:
 
@@ -44,16 +48,16 @@ If you want to set Big Picture as the default theme, you can do so by following 
 
 Once this is done, you should be able to see the new theme on the frontend. Keep in mind any customizations made to the previous theme will not be reflected as all of the theme and templating information is now being pulled from the **big-picture** folder.
 
-# Configuration with Admin plugin
+## Configuration with Admin plugin
 
 If you have [Admin plugin](https://github.com/getgrav/grav-plugin-admin) installed, you can fully manage the sub-pages via Admin plugin.
 
-* For all of the sub-pages, there is a "Heading" option in "Content" tab which is used to define the heading of each page.
-* "Background Image" option is available in "Content" tab for "intro" and "info" page file.
+* For all of the sub-pages, there is a `Heading` option in `Content` tab which is used to define the heading of each page.
+* `Background Image` option is available in `Content` tab for `intro` and `info` page file.
 
 ![](screenshot_1.jpg)
 
-* There is an "Images" tab for "gallery" page file, it is used to setup the image gallery.
+* There is an `Images` tab for `gallery` template, it is used to setup the image gallery.
 
 ![](screenshot_2.jpg)
 
@@ -61,9 +65,13 @@ If you have [Admin plugin](https://github.com/getgrav/grav-plugin-admin) install
 
 ![](screenshot_3.jpg)
 
-# Navigation Buttons
+* When you create a page with `default` template (file name is `default.md`), you can show a menu item linked to your home page at the top right corner of the page, you just need to enter the label of the menu item to `Home Menu Item` field at the bottom of `Content` tab.
 
-To have navigation button for each section, the folder name of your home page must be "home", in its modular.md file you need to setup the custom ordering of your modular pages. Here is an example:
+![](screenshot_3.jpg)
+
+## Navigation Buttons
+
+To have navigation button for each section, the folder name of your home page must be `home`, in its modular.md file you need to setup the custom ordering of your modular pages. Here is an example:
 
 ```
 title: Home
@@ -80,9 +88,9 @@ content:
             - _contact
 ```
 
-# Updating
+## Updating
 
-## GPM Update (Preferred)
+### GPM Update (Preferred)
 
 The simplest way to update this theme is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm). You can do this with this by navigating to the root directory of your Grav install using your system's Terminal (also called command line) and typing the following:
 
@@ -90,7 +98,7 @@ The simplest way to update this theme is via the [Grav Package Manager (GPM)](ht
 
 This command will check your Grav install to see if your Gateway theme is due for an update. If a newer release is found, you will be asked whether or not you wish to update. To continue, type `y` and hit enter. The theme will automatically update and clear Grav's cache.
 
-## Manual Update
+### Manual Update
 
 Manually updating Big Picture is pretty simple. Here is what you will need to do to get this done:
 

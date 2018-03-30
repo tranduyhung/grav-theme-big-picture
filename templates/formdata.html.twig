@@ -1,6 +1,11 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
+{% if page.header.back_to_home_page is not empty %}
+  {% set back = page.header.back_to_home_page %}
+{% else %}
+  {% set back = 'THEME_BIG_PICTURE.BACK_TO_HOME_PAGE'|t %}
+{% endif %}
 <section class="main style3 secondary">
     <div class="content container">
         <header>
@@ -10,7 +15,7 @@
 
         <div class="12u">
             <ul class="actions">
-                <li><a href="{{ base_url == '' ? '/' : base_url }}" class="button">Back To Home Page</a></li>
+                <li><a href="{{ base_url == '' ? '/' : base_url }}" class="button">{{ back }}</a></li>
             </ul>
         </div>
     </div>
