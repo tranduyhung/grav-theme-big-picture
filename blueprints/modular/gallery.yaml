@@ -13,7 +13,7 @@ form:
           title: Images
           fields:
             header.thumbnail_max_width:
-              type: text
+              type: number
               size: x-small
               label: Thumbnail's Max Width
               help: Min value 360, max value 1000.
@@ -23,7 +23,7 @@ form:
                 min: 360
                 max: 1000
             header.thumbnail_max_height:
-              type: text
+              type: number
               size: x-small
               label: Thumbnail's Max Height
               help: Min value 360, max value 1000.
