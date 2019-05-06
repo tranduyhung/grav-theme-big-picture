@@ -1,3 +1,9 @@
+# v1.4.1
+## 06/05/2019
+
+1. [](#bugfix)
+    * Fixed issue when saving gallery modular page (thanks to @trangthaonguyen)
+
 # v1.4.0
 ## 30/03/2018
 
