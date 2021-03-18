@@ -13,7 +13,7 @@
             <h2>{{ header.heading }}</h2>
         </header>
 
-        {{ content }}
+        {{ content|raw }}
 
         {% if subpages[nextSubPageIndex] %}
         <footer>

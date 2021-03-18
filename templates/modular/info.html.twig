@@ -12,7 +12,7 @@
         <header>
             <h2>{{ header.heading }}</h2>
         </header>
-        {{ content }}
+        {{ content|raw }}
     </div>
 
     {% if subpages[nextSubPageIndex] %}

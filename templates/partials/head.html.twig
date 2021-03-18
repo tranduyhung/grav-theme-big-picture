@@ -36,7 +36,7 @@
     {% endif %}
 {% endblock %}
 
-{{ assets.css() }}
+{{ assets.css()|raw }}
 
 {% block javascripts %}
     {% if browser.getBrowser == 'msie' and browser.getVersion <= 8 %}
@@ -58,6 +58,6 @@
     {% do assets.add('theme://assets/js/main.js') %}
 {% endblock %}
 
-{{ assets.js() }}
+{{ assets.js()|raw }}
 
 {% endblock head %}
