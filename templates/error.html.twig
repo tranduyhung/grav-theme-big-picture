@@ -16,7 +16,7 @@
             <h2>{{ 'ERROR'|t }} {{ page.header.http_response_code }}</h2>
         </header>
 
-        {{ content }}
+        {{ content|raw }}
     </div>
 </section>
 {% endblock %}
