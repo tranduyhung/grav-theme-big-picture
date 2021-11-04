@@ -10,7 +10,7 @@
     {% if theme_config.footer_items|length > 0 %}
     <ul class="menu">
         {% for item in theme_config.footer_items %}
-        <li>{{ item.item }}</li>
+        <li>{{ item.item|raw }}</li>
         {% endfor %}
     </ul>
     {% endif %}
