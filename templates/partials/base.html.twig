@@ -4,11 +4,15 @@
     <head>
         {% include 'partials/head.html.twig' %}
     </head>
-    <body>
+    <body class="is-preload">
         {% include 'partials/header.html.twig' %}
 
         {% block content %}{% endblock %}
 
         {% include 'partials/footer.html.twig' %}
+
+        {% block bottom %}
+            {{ assets.js('bottom')|raw }}
+        {% endblock %}
     </body>
 </html>

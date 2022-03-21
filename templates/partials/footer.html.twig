@@ -1,8 +1,8 @@
 <footer id="footer">
     {% if theme_config.footer_icons|length > 0 %}
-    <ul class="actions">
+    <ul class="icons">
         {% for icon in theme_config.footer_icons %}
-        <li><a href="{{ icon.link }}" class="icon {{ icon.icon }}"></a></li>
+        <li><a href="{{ icon.link }}" class="icon brands {{ icon.icon }}"></a></li>
         {% endfor %}
     </ul>
     {% endif %}
@@ -10,7 +10,7 @@
     {% if theme_config.footer_items|length > 0 %}
     <ul class="menu">
         {% for item in theme_config.footer_items %}
-        <li>{{ item.item }}</li>
+        <li>{{ item.item|raw }}</li>
         {% endfor %}
     </ul>
     {% endif %}

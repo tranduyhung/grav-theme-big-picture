@@ -1,3 +1,15 @@
+# v2.0.0
+## 22/03/2022
+
+1. [](#improved)
+    * Updated to the lastest upstream version.
+
+# v1.4.3
+## 11/04/2021
+
+1. [](#bugfix)
+    * Fixed Grav 1.7 incompatibility.
+
 # v1.4.2
 ## 03/28/2021
 

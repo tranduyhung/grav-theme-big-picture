@@ -9,7 +9,7 @@
     {% set thumbHeight = 540 %}
 {% endif %}
 <section id="{{ page.folder|replace({'_': ''}) }}" class="main style3 primary">
-    <div class="content container">
+    <div class="content">
         <header>
             <h2>{{ header.heading }}</h2>
 
@@ -17,19 +17,11 @@
         </header>
 
         {% if header.images|length > 0 %}
-        <div class="container 75% gallery">
+        <div class="gallery">
             {% for image in header.images %}
-                {% if loop.index % 2 == 1 %}
-                <div class="row 0% images">
-                {% endif %}
-                    <div class="6u 12u(mobile)">
-                        <a href="{{ page.media[image.full].url }}" class="image fit {% if loop.index % 2 == 1 %}from-left{% else %}from-right{% endif %}">
-                            <img src="{{ page.media[image.full].cropResize(thumbWidth, thumbHeight).url }}" title="{{ image.title|escape }}" />
-                        </a>
-                    </div>
-                {% if loop.index % 2 == 0 or loop.index == header.images|length %}
-                </div>
-                {% endif %}
+            <article class="from-{% if loop.index is odd %}left{% else %}right{% endif %}">
+                <a href="{{ page.media[image.full].url }}" class="image fit"><img src="{{ page.media[image.full].cropResize(thumbWidth, thumbHeight).url }}" title="{{ image.title|escape }}" alt="" /></a>
+            </article>
             {% endfor %}
         </div>
         {% endif %}
