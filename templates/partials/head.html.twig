@@ -1,17 +1,13 @@
 {% block head %}
 <title>{% if header.title %}{{ header.title }} {% else %} {{ site.title }} {% endif %}</title>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
 {% for meta in page.metadata %}
     {% if meta.name != 'generator' %}
     <meta {% if meta.name %}name="{{ meta.name }}" {% endif %}{% if meta.http_equiv %}http-equiv="{{ meta.http_equiv }}" {% endif %}{% if meta.charset %}charset="{{ meta.charset }}" {% endif %}{% if meta.property %}property="{{ meta.property }}" {% endif %}{% if meta.content %}content="{{ meta.content }}" {% endif %}/>
     {% endif %}
 {% endfor %}
-
-{% if header.robots %}
-<meta name="robots" content="{{ header.robots }}">
-{% endif %}
 
 {% set favicon = 'favicon.png' %}
 {% if theme_config.favicon|length > 0 %}
@@ -23,39 +19,23 @@
 <link rel="icon" href="{{ url('theme://images/' ~ favicon, true) }}" />
 
 {% block stylesheets %}
-    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,900' rel='stylesheet' type='text/css'>
-    {% do assets.add('theme://assets/css/font-awesome.min.css') %}
     {% do assets.add('theme://assets/css/main.css') %}
-
-    {% if browser.getBrowser == 'msie' and browser.getVersion <= 8 %}
-        {% do assets.add('theme://assets/css/ie8.css') %}
-    {% endif %}
-
-    {% if browser.getBrowser == 'msie' and browser.getVersion == 9 %}
-        {% do assets.add('theme://assets/css/ie9.css') %}
-    {% endif %}
+    <noscript>
+        {% do assets.add('theme://assets/css/noscript.css') %}
+    </noscript>
 {% endblock %}
 
 {{ assets.css()|raw }}
 
 {% block javascripts %}
-    {% if browser.getBrowser == 'msie' and browser.getVersion <= 8 %}
-        {% do assets.add('theme://assets/js/ie/html5shiv.js') %}
-    {% endif %}
-
-    {% if browser.getBrowser == 'msie' and browser.getVersion <= 8 %}
-        {% do assets.add('theme://assets/js/ie/respond.min.js') %}
-    {% endif %}
-
     {% do assets.addJs('jquery', 101) %}
-    {% do assets.add('theme://assets/js/jquery.poptrox.min.js') %}
-    {% do assets.add('theme://assets/js/jquery.dropotron.min.js') %}
-    {% do assets.add('theme://assets/js/jquery.onvisible.min.js') %}
-    {% do assets.add('theme://assets/js/jquery.scrolly.min.js') %}
-    {% do assets.add('theme://assets/js/jquery.scrollex.min.js') %}
-    {% do assets.add('theme://assets/js/skel.min.js') %}
-    {% do assets.add('theme://assets/js/util.js') %}
-    {% do assets.add('theme://assets/js/main.js') %}
+    {% do assets.add('theme://assets/js/jquery.poptrox.min.js', {group:'bottom'}) %}
+    {% do assets.add('theme://assets/js/jquery.scrolly.min.js', {group:'bottom'}) %}
+    {% do assets.add('theme://assets/js/jquery.scrollex.min.js', {group:'bottom'}) %}
+    {% do assets.add('theme://assets/js/browser.min.js', {group:'bottom'}) %}
+    {% do assets.add('theme://assets/js/breakpoints.min.js', {group:'bottom'}) %}
+    {% do assets.add('theme://assets/js/util.js', {group:'bottom'}) %}    
+    {% do assets.add('theme://assets/js/main.js', {group:'bottom'}) %}
 {% endblock %}
 
 {{ assets.js()|raw }}

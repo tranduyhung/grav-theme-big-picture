@@ -1,91 +1,15 @@
-{% if form is null %}
-    {% set form = grav.session.getFlashObject('form') %}
-{% endif  %}
+{% extends "forms/default/form.html.twig" %}
 
-{% include 'partials/form-messages.html.twig' %}
+{% block inner_markup_field_open %}
+  {% if field.name == 'name' %}
+  <div class="field half">
+  {% elseif field.name == 'email' %}
+  <div class="field half">
+  {% else %}
+  <div class="field">
+  {% endif %}
+{% endblock %}
 
-{% set scope = scope ?: 'data.' %}
-{% set multipart = '' %}
-{% set method = form.method|upper|default('POST') %}
-{% set client_side_validation = form.client_side_validation is not null ? form.client_side_validation : config.plugins.form.client_side_validation|default(true) %}
-{% set inline_errors = form.inline_errors is not null ? form.inline_errors : config.plugins.form.inline_errors(false) %}
-
-{% for field in form.fields %}
-    {% if (method == 'POST' and field.type == 'file') %}
-        {% set multipart = ' enctype="multipart/form-data"' %}
-    {% endif %}
-{% endfor %}
-
-{% set action = form.action ? base_url ~ form.action : base_url ~ page.route ~ uri.params %}
-
-{% if (action == base_url_relative) %}
-    {% set action = base_url_relative ~ '/' ~ page.slug %}
-{% endif %}
-
-<form name="{{ form.name }}"
-      action="{{ action | trim('/', 'right') }}"
-      method="{{ method }}"{{ multipart }}
-      {% if form.id %}id="{{ form.id }}"{% endif %}
-      {% block form_classes %}
-      class="{{ form_outer_classes }} {{ form.classes }}"
-      {% endblock %}
-      {% if form.novalidate %}novalidate{% endif %}
->
-
-  {% block inner_markup_fields_start %}{% endblock %}
-
-  {% for field in form.fields %}
-    {% if field.type == 'file' %}
-        {% do assets.addJs('plugin://form/assets/form.min.js') %}
-    {% endif %}
-    {% set value = form.value(field.name) %}
-                {% if field.name == 'name' %}
-                <div class="row uniform 50%">
-                    <div class="6u 12u$(xsmall)">
-                {% elseif field.name == 'email' %}
-                <div class="6u$ 12u$(xsmall)">
-                {% else %}
-                <div class="row uniform 50%">
-                    <div class="12u$">
-                {% endif %}
-
-                    {% include "forms/fields/#{field.type}/#{field.type}.html.twig" ignore missing %}
-
-                {% if field.name == 'name' %}
-                    </div>
-                {% else %}
-                    </div>
-                </div>
-                {% endif %}
-  {% endfor %}
-
-  {% include "forms/fields/formname/formname.html.twig" %}
-
-  {% block inner_markup_fields_end %}{% endblock %}
-
-  {% block inner_markup_buttons_start %}
-  <div class="buttons">
-  {% endblock %}
-
-    <div class="row uniform 50%">
-        <div class="12u$">
-            <ul class="actions">
-            {% for button in form.buttons %}
-                {% set type = button.type|default('submit') %}
-                {% if type == 'submit' %}
-                <li><input class="{{ button.classes|default('button') }}" type="{{ type }}" value="{{ button.value|t|default('Submit') }}"></li>
-                {% else %}
-                <li><button class="{{ button.classes|default('button') }}" type="{{ type }}">{{ button.value|t|default('Submit') }}</button></li>
-                {% endif %}
-            {% endfor %}
-            </ul>
-        </div>
-    </div>
-
-  {% block inner_markup_buttons_end %}
+{% block inner_markup_field_close %}
   </div>
-  {% endblock %}
-
-  {% include 'forms/fields/uniqueid/uniqueid.html.twig' %}
-  {{ nonce_field('form', 'form-nonce')|raw }}
-</form>
+{% endblock %}

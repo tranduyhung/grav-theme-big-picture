@@ -13,11 +13,9 @@
         </header>
         {{ content|raw }}
 
-        <div class="12u">
-            <ul class="actions">
-                <li><a href="{{ base_url == '' ? '/' : base_url }}" class="button">{{ back }}</a></li>
-            </ul>
-        </div>
+        <p>
+            <a href="{{ base_url == '' ? '/' : base_url }}" class="button">{{ back }}</a></li>
+        </p>
     </div>
 </section>
 {% endblock %}

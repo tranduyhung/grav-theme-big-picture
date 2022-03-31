@@ -6,9 +6,9 @@
     {% endif %}
 {% endfor %}
 
-<section id="{{ page.folder|replace({'_': ''}) }}" class="main style1 dark fullscreen" style="background-image: url('{{ url('theme://assets/css/images/overlay.png', true) }}'), url('{{ page.media[header.background_image].url }}');
+<section id="{{ page.folder|replace({'_': ''}) }}" class="main style1 dark fullscreen intro" style="background-image: url('{{ url('theme://assets/css/images/overlay.png', true) }}'), url('{{ page.media[header.background_image].url }}');
 ">
-    <div class="content container 75%">
+    <div class="content">
         <header>
             <h2>{{ header.heading }}</h2>
         </header>
