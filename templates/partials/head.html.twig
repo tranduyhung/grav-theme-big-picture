@@ -1,7 +1,7 @@
 {% block head %}
 <title>{% if header.title %}{{ header.title }} {% else %} {{ site.title }} {% endif %}</title>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=, user-scalable=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
 {% for meta in page.metadata %}
     {% if meta.name != 'generator' %}
