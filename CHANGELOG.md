@@ -1,3 +1,9 @@
+# v2.0.1
+## 12/18/2022
+
+1. [](#bugfix)
+    * Fix blueprint for module info, intro (thanks to @Thaonguyen4488)
+
 # v2.0.0
 ## 31/03/2022
 
