@@ -25,4 +25,4 @@ form:
                 - .jpg
               label: Background Image
               help: Image filename that exists in the page folder.
-              placeholder: For example: myimage.jpg
+              placeholder: 'For example: myimage.jpg'
