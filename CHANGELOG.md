@@ -1,5 +1,11 @@
+# v3.0.0
+## 27/01/2023
+
+1. [](#improved)
+    * Updated to the latest upstream version.
+
 # v2.0.1
-## 12/18/2022
+## 18/12/2022
 
 1. [](#bugfix)
     * Fix blueprint for module info, intro (thanks to @Thaonguyen4488)
@@ -17,7 +23,7 @@
     * Fixed Grav 1.7 incompatibility.
 
 # v1.4.2
-## 03/28/2021
+## 29/03/2021
 
 1. [](#bugfix)
     * Added raw filter for Grav 1.7 compatibility.
