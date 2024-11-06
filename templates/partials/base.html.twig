@@ -4,8 +4,10 @@
     <head>
         {% include 'partials/head.html.twig' %}
     </head>
-    <body class="is-preload">
-        {% include 'partials/header.html.twig' %}
+    <body class="is-preload" style="padding: 0">
+        {% if grav.theme.config.header_bar %}
+            {% include 'partials/header.html.twig' %}
+        {% endif %}
 
         {% block content %}{% endblock %}
 

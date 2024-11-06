@@ -54,3 +54,13 @@ form:
           label: THEME_BIG_PICTURE.FOOTER_ITEMS_ITEM
           help: THEME_BIG_PICTURE.FOOTER_ITEMS_ITEM_HELP
           placeholder: THEME_BIG_PICTURE.FOOTER_ITEMS_ITEM_HELP
+
+    header_bar:
+      type: toggle
+      label: THEME_BIG_PICTURE.ENABLE_HEADER
+      default: 1
+      options:
+        0: THEME_BIG_PICTURE.SHOW_HEADER
+        1: THEME_BIG_PICTURE.HIDE_HEADER
+      validate:
+        type: bool

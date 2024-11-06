@@ -15,3 +15,26 @@ en:
     HOME: Home
     HOME_MENU_ITEM: Home Menu Item
     HOME_MENU_ITEM_HELP: If you want to show a menu item linked to home at the top right corner, you enter the label of the menu item here. For example "Home".
+    ENABLE_HEADER: Enable header bar
+    SHOW_HEADER: Header disabled
+    HIDE_HEADER: Header enabled
+de:
+  THEME_BIG_PICTURE:
+    FAVICON: favicon
+    ERROR_BACKGROUND_IMAGE: Hintergrundbild für die Fehlerseite
+    FOOTER_ICONS: Icons in der Fusszeile
+    FOOTER_ICONS_HELP: Links in der Fusszeile anzeigen.
+    FOOTER_ICONS_ICON: Font Awesome Icon
+    FOOTER_ICONS_LINK: Link
+    FOOTER_ICONS_LINK_HELP: 'https://www.facebook.com/deine-seite'
+    FOOTER_ITEMS: Items in der Fusszeile
+    FOOTER_ITEMS_HELP: Rechts in der Fusszeile anzeigen.
+    FOOTER_ITEMS_ITEM: Item
+    FOOTER_ITEMS_ITEM_HELP: Text oder HTML Code
+    BACK_TO_HOME_PAGE: Zurück auf die Home Page
+    HOME: Home
+    HOME_MENU_ITEM: Home Menu Item
+    HOME_MENU_ITEM_HELP: Gib hier die Beschriftung des Menu-Items ein, Wenn du eines rechts oben anzeigen willst. Es führt zur Home-Seite. Zum Beispiel "Home".
+    ENABLE_HEADER: Kopfzeile anzeigen
+    SHOW_HEADER: Kopfzeile aktiv
+    HIDE_HEADER: Kopfzeile inaktiv    
