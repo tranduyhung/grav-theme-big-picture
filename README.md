@@ -52,7 +52,7 @@ Once this is done, you should be able to see the new theme on the frontend. Keep
 
 If you have [Admin plugin](https://github.com/getgrav/grav-plugin-admin) installed, you can fully manage the sub-pages via Admin plugin.
 
-* For all of the sub-pages, there is a `Heading` option in `Content` tab which is used to define the heading of each page.
+* Use `Title` in the the sub-pages to define the heading of each page.
 * `Background Image` option is available in `Content` tab for `intro` and `info` page file.
 
 ![](screenshot_1.jpg)
