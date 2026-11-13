@@ -12,10 +12,6 @@ form:
           type: tab
           title: PLUGIN_ADMIN.CONTENT
           fields:
-            header.heading:
-              type: text
-              label: Heading
-              help: Section's heading.
             header.background_image:
               type: filepicker
               folder: '@self'
